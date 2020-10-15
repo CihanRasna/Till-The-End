@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
         offset = transform.position - target.position;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         Vector3 newPosition = new Vector3(transform.position.x,transform.position.y, offset.z + target.position.z);
         transform.position = newPosition;
