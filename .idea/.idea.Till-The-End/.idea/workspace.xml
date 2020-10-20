@@ -12,10 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa9292.20031/BasePlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa9292.20875/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa9292.22509/LoseHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PowerUps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Characters/AnimatorOverrider.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -33,8 +30,11 @@
         <option value="$PROJECT_DIR$/Assets/IgnoreLayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/PowerUps.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prefabs/Characters/AnimatorOverrider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PowerUps.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -53,6 +53,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -91,7 +92,9 @@
       <workItem from="1602787468315" duration="10714000" />
       <workItem from="1602808577509" duration="1323000" />
       <workItem from="1602942615381" duration="1124000" />
-      <workItem from="1603107288067" duration="30246000" />
+      <workItem from="1603107288067" duration="30540000" />
+      <workItem from="1603198663777" duration="2999000" />
+      <workItem from="1603203996835" duration="10464000" />
     </task>
     <servers />
   </component>
@@ -108,9 +111,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602772109792" />
-    <state x="-1489" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1603114994096">
+    <state x="-1495" y="187" width="672" height="677" key="run.anything.popup" timestamp="1603207067410">
       <screen x="-1920" y="0" width="1536" height="832" />
     </state>
-    <state x="-1489" y="153" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@-1920.0.1536.832" timestamp="1603114994096" />
+    <state x="-1495" y="187" width="672" height="677" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@-1920.0.1536.832" timestamp="1603207067410" />
+    <state x="-1489" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1603210701133">
+      <screen x="-1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="-1489" y="153" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@-1920.0.1536.832" timestamp="1603210701133" />
   </component>
 </project>
