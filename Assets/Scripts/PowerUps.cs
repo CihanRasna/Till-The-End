@@ -26,7 +26,7 @@ public class PowerUps : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Respawn"))
+        if (other.gameObject.CompareTag("Reward"))
         {
             Destroy(other.gameObject);
             powerUp = true;

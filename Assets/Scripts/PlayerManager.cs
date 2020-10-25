@@ -9,7 +9,6 @@ public class PlayerManager : MonoBehaviour
     public static bool isGameLose = false;
     public static bool isGameStarted = false;
 
-
     private Rigidbody _rb;
 
     [SerializeField] private float lineChangeSpeed = 5f;
@@ -90,7 +89,6 @@ public class PlayerManager : MonoBehaviour
         Vector3 left = new Vector3(position.x - 1, position.y, position.z);
         Vector3 right = new Vector3(position.x + 1, position.y, position.z);
 
-
         if (currentLine == 0)
         {
             position = Vector3.Lerp(position, left, Time.deltaTime * lineChangeSpeed);
@@ -132,5 +130,6 @@ public class PlayerManager : MonoBehaviour
         }
 
         transform.position = position;
+        
     }
 }

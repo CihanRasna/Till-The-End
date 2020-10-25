@@ -12,7 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Characters/AnimatorOverrider.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -28,13 +27,15 @@
         <option value="$PROJECT_DIR$/Assets/HouseDistance.cs" />
         <option value="$PROJECT_DIR$/Assets/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/IgnoreLayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/PowerUps.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Prefabs/Characters/AnimatorOverrider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PowerUps.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/MenuScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PowerUps.cs" />
       </list>
     </option>
   </component>
@@ -94,7 +95,13 @@
       <workItem from="1602942615381" duration="1124000" />
       <workItem from="1603107288067" duration="30540000" />
       <workItem from="1603198663777" duration="2999000" />
-      <workItem from="1603203996835" duration="10464000" />
+      <workItem from="1603203996835" duration="11411000" />
+      <workItem from="1603225603543" duration="2343000" />
+      <workItem from="1603295697438" duration="616000" />
+      <workItem from="1603574599292" duration="9000" />
+      <workItem from="1603587334030" duration="1055000" />
+      <workItem from="1603625897870" duration="2264000" />
+      <workItem from="1603656864800" duration="2035000" />
     </task>
     <servers />
   </component>
@@ -107,6 +114,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1403" y="237" key="#Notifications" timestamp="1603625917378">
+      <screen x="-1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="-1403" y="237" key="#Notifications/-1920.0.1536.832/0.0.1920.1040@-1920.0.1536.832" timestamp="1603625917378" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602772109792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

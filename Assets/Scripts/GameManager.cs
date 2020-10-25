@@ -58,17 +58,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LevelRestart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        PlayerManager.isGameLose = false;
-        PlayerManager.isGameStarted = false;
-    }
-
     public void StartGame()
     {
         PlayerManager.Speed = 4f;
         PlayerManager.isGameStarted = true;
         startButton.SetActive(false);
+    }
+    
+    public void LevelRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerManager.isGameLose = false;
+        PlayerManager.isGameStarted = false;
     }
 }

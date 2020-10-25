@@ -21,25 +21,23 @@ public class Spawner : MonoBehaviour
         playerTransform = GameObject.Find("Player").transform;
         for (int i = 0; i < numberOfRoad; i++)
         {
-            for (int j = 0; j < emptyRoad; j++)
-            {
-                SpawnRoad(0);
-            }
-            SpawnRoad(Random.Range(0,roadPrefabs.Length));
-            
-            
+            // for (int j = 0; j < emptyRoad; j++)
+            // {
+            //     SpawnRoad(0);
+            // }
+             SpawnRoad(Random.Range(0,roadPrefabs.Length));
         }
     }
 
     
     void Update()
     {
-        if (playerTransform.position.z > startSpawnPos - (numberOfRoad * roadLength) * 3.5f)
+        if (playerTransform.position.z > startSpawnPos - (numberOfRoad * roadLength) * .5f)
         {
-            for (int i = 0; i < emptyRoad; i++)
-            {
-                SpawnRoad(0);
-            }
+            // for (int i = 0; i < emptyRoad; i++)
+            // {
+            //     SpawnRoad(0);
+            // }
             SpawnRoad(Random.Range(0,roadPrefabs.Length));
             DeleteRoad();
         }

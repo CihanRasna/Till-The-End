@@ -939,7 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roadPrefabs:
   - {fileID: 4863703831125620299, guid: 5f93949187277284eacf6285429ac10b, type: 3}
-  - {fileID: 3340528540174675819, guid: 9666701415c862e4ab508a52620b0f98, type: 3}
+  - {fileID: 3340528540174675819, guid: d905ccb6714b6264292d8119e4915b9d, type: 3}
   - {fileID: 6626216216591882880, guid: c71e0d4cff28179488ded88f5bc0ee49, type: 3}
   - {fileID: 7370769461171068674, guid: 2abed5f4fb0e6734ca227a50cdfef5ba, type: 3}
   - {fileID: 2307913268941946924, guid: a9835d2ced9696546bffe2ae6c23eb38, type: 3}
