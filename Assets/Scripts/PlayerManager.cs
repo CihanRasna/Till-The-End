@@ -2,17 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerManager : MonoBehaviour
 {
-    public static float Speed = 4f;
+    public AudioClip[] playerSFX;
+    public AudioSource audioSource;
+
+    Vector2 firstPressPos;
+    Vector2 secondPressPos;
+    Vector2 currentSwipe;
+
+    public static float speed = 4f;
     public static bool isGameLose = false;
     public static bool isGameStarted = false;
 
     private Rigidbody _rb;
 
     [SerializeField] private float lineChangeSpeed = 5f;
-    [SerializeField] private float speedUpMeter = 20;
+    [SerializeField] private float speedUpMeter = 20f;
 
     [SerializeField] private ParticleSystem playerCrash;
 
@@ -22,8 +30,9 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody>();
-        Speed = 0f;
+        speed = 0f;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -31,7 +40,9 @@ public class PlayerManager : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Instantiate(playerCrash, transform.position + Vector3.back + Vector3.zero, Quaternion.identity);
-            Speed = 0f;
+            speed = 0f;
+            audioSource.PlayOneShot(playerSFX[4]);
+            audioSource.PlayOneShot(playerSFX[5]);
             isGameLose = true;
         }
     }
@@ -42,22 +53,69 @@ public class PlayerManager : MonoBehaviour
         {
             if (!isGameLose)
             {
-                PlayerInput();
-                MovePlayer();
-
+                SwipeInput();
 
                 if (GameManager.distance >= speedUpMeter)
                 {
                     speedUpMeter += speedUpMeter;
-                    Speed += 2f;
+                    speed += 2f;
                 }
 
-                _rb.velocity = Vector3.forward * Speed;
+                _rb.velocity = Vector3.forward * speed;
             }
         }
     }
 
-    private void PlayerInput()
+    private void FixedUpdate()
+    {
+        if (!isGameLose)
+        {
+            MovePlayer();
+        }
+    }
+
+    private void SwipeInput()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            firstPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            int randomSfx = Random.Range(0, playerSFX.Length - 2);
+
+            secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            currentSwipe = new Vector2(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
+            currentSwipe.Normalize();
+
+            //swipe left
+            if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+            {
+                currentLine--;
+                if (currentLine == -1)
+                {
+                    currentLine = 0;
+                }
+
+                audioSource.PlayOneShot(playerSFX[randomSfx]);
+            }
+
+            //swipe right
+            if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+            {
+                currentLine++;
+                if (currentLine == 3)
+                {
+                    currentLine = 2;
+                }
+
+                audioSource.PlayOneShot(playerSFX[randomSfx]);
+            }
+        }
+    }
+
+    private void TapInput()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -130,6 +188,5 @@ public class PlayerManager : MonoBehaviour
         }
 
         transform.position = position;
-        
     }
 }

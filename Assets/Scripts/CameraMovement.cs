@@ -6,16 +6,16 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Transform target;
-    private Vector3 offset;
+    private Vector3 zOffset;
 
     void Start()
     {
-        offset = transform.position - target.position;
+        zOffset = transform.position - target.position;
     }
 
     private void LateUpdate()
     {
-        Vector3 newPosition = new Vector3(transform.position.x,transform.position.y, offset.z + target.position.z);
+        Vector3 newPosition = new Vector3(target.position.x,transform.position.y, zOffset.z + target.position.z);
         transform.position = newPosition;
     }
 }

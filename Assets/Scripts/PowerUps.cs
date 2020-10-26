@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PowerUps : MonoBehaviour
 {
-    private bool powerUp = false;
+    public bool powerUp = false;
     private bool resetTimer;
     
     private Slider progressBar;

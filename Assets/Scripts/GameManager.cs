@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public static float distance;
     private float panelWaitTime = 0f;
+    private float gameStartWait = 0f;
 
     [SerializeField] private int roundedDistance = 0;
 
@@ -22,14 +23,28 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.Find("Player");
         startButton = GameObject.Find("StartButton");
+        
         distanceText = GameObject.Find("RangeText").GetComponent<TextMeshProUGUI>();
         distanceText.text = roundedDistance.ToString();
+        
+        startButton.SetActive(false);
         panel.SetActive(false);
+        
         highScore.text = PlayerPrefs.GetInt("HighScore" , 0) + " M";
     }
 
     void Update()
     {
+        if (gameStartWait <= 3f)
+        {
+            gameStartWait += Time.deltaTime;
+            if (gameStartWait >= 3f)
+            {
+                startButton.SetActive(true);
+                return;
+            }
+        }
+
         distance = Mathf.Round(Vector3.Distance(player.transform.position, this.transform.position) * 100.0f) * 0.01f;
         roundedDistance = (int) distance;
         distanceText.text = roundedDistance + " M";
@@ -60,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        PlayerManager.Speed = 4f;
+        PlayerManager.speed = 4f;
         PlayerManager.isGameStarted = true;
         startButton.SetActive(false);
     }

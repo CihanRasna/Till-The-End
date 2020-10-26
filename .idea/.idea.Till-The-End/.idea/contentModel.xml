@@ -7,6 +7,8 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CameraChanger.cs" t="Include" />
+        <e p="DestroyFemaleObj.cs" t="Include" />
         <e p="External Assets" t="Include">
           <e p="BOXOPHOBIC" t="Include">
             <e p="Skybox Cubemap Extended" t="Include">
@@ -52,21 +54,15 @@
             </e>
           </e>
         </e>
-        <e p="MenuScript.cs" t="Include" />
-        <e p="Prefabs" t="Include">
-          <e p="Characters" t="Include">
-            <e p="Gameplay" t="Include">
-              <e p="AnimatorOverrider.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Rotator.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AnimatorOverrider.cs" t="Include" />
           <e p="CameraMovement.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="HouseDistance.cs" t="Include" />
+          <e p="MenuScript.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
           <e p="PowerUps.cs" t="Include" />
+          <e p="Rotator.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
           <e p="Test.cs" t="Include" />
         </e>
